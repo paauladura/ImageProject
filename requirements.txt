@@ -1,0 +1,17 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+Pillow
+opencv-python-headless
+tqdm
+tensorflow
+torch
+torchvision
+ultralytics
+transformers
+ipykernel
+diffusers
+peft
+accelerate
+safetensors

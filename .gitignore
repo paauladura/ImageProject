@@ -1,0 +1,31 @@
+# Datasets (demasiado grandes para git)
+dataset/
+dataset_augmented/
+
+# Entorno virtual
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Modelos descargados
+*.pt
+*.pth
+*.h5
+*.keras
+*.safetensors
+
+# Archivos generados
+eda_dataframe.csv
+generated_captions.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
