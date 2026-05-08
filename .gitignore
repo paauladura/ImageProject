@@ -1,6 +1,7 @@
 # Datasets (demasiado grandes para git)
 dataset/
 dataset_augmented/
+dataset_model_ready/
 
 # Entorno virtual
 venv/
@@ -18,9 +19,11 @@ __pycache__/
 *.keras
 *.safetensors
 
-# Archivos generados
+# Archivos generados en el EDA
 eda_dataframe.csv
-generated_captions.csv
+splits_original.csv
+prepared_dataframe.csv
+class_to_idx.json
 
 # OS
 .DS_Store
