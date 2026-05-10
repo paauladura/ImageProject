@@ -25,6 +25,10 @@ splits_original.csv
 prepared_dataframe.csv
 class_to_idx.json
 
+# Archivos generadps en ImageClassification
+classification_results.csv
+qualitative_predictions_test.csv
+
 # OS
 .DS_Store
 Thumbs.db
