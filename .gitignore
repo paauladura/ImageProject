@@ -25,9 +25,13 @@ splits_original.csv
 prepared_dataframe.csv
 class_to_idx.json
 
-# Archivos generadps en ImageClassification
+# Archivos generados en ImageClassification
 classification_results.csv
 qualitative_predictions_test.csv
+
+# Archivos generados en ObjectDetection
+gradcam_test_analysis.csv
+object_detection_summary.csv
 
 # OS
 .DS_Store
