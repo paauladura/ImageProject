@@ -33,6 +33,9 @@ qualitative_predictions_test.csv
 gradcam_test_analysis.csv
 object_detection_summary.csv
 
+#Archivos generados en ImageGeneration
+generated_images/
+
 # OS
 .DS_Store
 Thumbs.db
