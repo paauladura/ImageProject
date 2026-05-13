@@ -7,7 +7,7 @@
 
 ## Descripción
 
-Proyecto completo de procesamiento de imágenes que abarca desde el análisis exploratorio hasta la generación de texto a partir de imágenes. Se trabaja con un dataset de 5 categorías (~150 imágenes por clase) aplicando técnicas de Machine Learning clásico, Deep Learning y modelos preentrenados del estado del arte.
+Proyecto de procesamiento de imágenes que abarca análisis exploratorio, data augmentation, clasificación de imágenes, detección de objetos y generación de imágenes. Se trabaja con un dataset de 5 categorías (~150 imágenes por clase) aplicando técnicas de Machine Learning clásico, Deep Learning y modelos preentrenados del estado del arte.
 
 ## Dataset
 
@@ -27,13 +27,9 @@ Proyecto completo de procesamiento de imágenes que abarca desde el análisis ex
 ├── 02_ImageClassification.ipynb     # Clasificación (SVM, CNN, Transfer Learning)
 ├── 03_ObjectDetection.ipynb         # Detección de objetos (YOLOv8, CNN localizador)
 ├── 04_ImageGeneration.ipynb         # Generación de imágenes (cDCGAN, Stable Diffusion)
-├── 05_ImageCaptioning.ipynb         # Image Captioning (BLIP, ViT-GPT2, CNN+LSTM)
-├── 06_ImageToText.ipynb             # Image-to-Text (VQA, atributos, multi-tarea)
 ├── requirements.txt                 # Dependencias del proyecto
-├── gen_pretrained/                  # Metadata para generación con Stable Diffusion
-│   └── metadata.jsonl
-├── dataset/                         # Dataset original (5 carpetas por clase)
-└── dataset_augmented/               # Dataset aumentado (generado por notebook 01)
+└── gen_pretrained/                  # Metadata para generación con Stable Diffusion
+    └── metadata.jsonl
 ```
 
 ## Notebooks
@@ -58,18 +54,6 @@ Proyecto completo de procesamiento de imágenes que abarca desde el análisis ex
 - **cDCGAN (from scratch):** GAN condicional entrenada desde cero (64×64)
 - **Stable Diffusion (preentrenado):** Generación text-to-image (512×512)
 - Análisis de diversidad y mode collapse
-
-### 05 — Image Captioning
-- **BLIP (Salesforce):** Captioning con encoder ViT + decoder Transformer
-- **ViT-GPT2:** Vision Transformer + GPT-2 autoregresivo
-- **CNN+LSTM (from scratch):** ResNet18 features + LSTM decoder
-- Métricas: BLEU-2, análisis de vocabulario por categoría
-
-### 06 — Image-to-Text
-- **Visual Question Answering (VQA):** Preguntas sobre imágenes con BLIP-VQA
-- **Extracción de atributos:** Fichas descriptivas estructuradas
-- **Captions condicionados:** Generación guiada por prompt
-- **CNN multi-tarea (from scratch):** Clasificación simultánea de escena, indoor/outdoor, natural/urbano
 
 ## Instalación
 
@@ -98,8 +82,8 @@ python -m ipykernel install --user --name ImageProject --display-name "Python (I
 
 Los notebooks están diseñados para ejecutarse **en orden secuencial**:
 
-1. **Notebook 01** genera el dataset aumentado (`dataset_augmented/`) necesario para los siguientes
-2. **Notebooks 02-06** pueden ejecutarse independientemente una vez completado el 01
+1. **Notebook 01** genera el dataset aumentado necesario para los siguientes
+2. **Notebooks 02-04** pueden ejecutarse independientemente una vez completado el 01
 
 ## Tecnologías principales
 
@@ -109,5 +93,4 @@ Los notebooks están diseñados para ejecutarse **en orden secuencial**:
 | Deep Learning | TensorFlow/Keras, PyTorch |
 | Detección | Ultralytics (YOLOv8) |
 | Generación | Diffusers (Stable Diffusion) |
-| Visión-Lenguaje | Transformers (BLIP, ViT-GPT2) |
-| Visualización | Matplotlib, Seaborn |
+| Visualización | Matplotlib, Pandas |
